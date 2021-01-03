@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {BrowserRouter} from 'react-router-dom'
+import {SearchContextProvider} from './Context/SearchContext'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SearchContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </SearchContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
